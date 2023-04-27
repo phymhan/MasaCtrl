@@ -26,8 +26,8 @@ def main(
     model_path: str = "andite/anything-v4.0",
     out_dir: str = "./workdir/masactrl_exp/",
     image_real: str = None,
-    prompt1: str = "1 beautiful girl, casual, outdoors, sitting",
-    prompt2: str = "1 beautiful girl, casual, outdoors, standing",
+    prompt1: str = "1boy, casual, outdoors, sitting",
+    prompt2: str = "1boy, casual, outdoors, standing",
     scale: float = 5,
     inv_scale: float = 1,
     inv_prompt: str = 'src',
@@ -41,7 +41,6 @@ def main(
     seed = 42
     seed_everything(seed)
 
-    out_dir = "./workdir/masactrl_exp/"
     os.makedirs(out_dir, exist_ok=True)
     sample_count = len(os.listdir(out_dir))
     out_dir = os.path.join(out_dir, f"sample_{sample_count}")
